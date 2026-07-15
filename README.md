@@ -1,34 +1,34 @@
-const int trig = 12;
-const int echo = 11;
 
-long duration;
-float distance;
+# Arduino Ultrasonic Sensor Project
 
-void setup() {
-  pinMode(trig, OUTPUT);
-  pinMode(echo, INPUT);
+A simple Arduino project created as a personal learning experiment to explore ultrasonic sensors, distance measurement, and basic C++ programming.
 
-  Serial.begin(9600);
-}
+This project was created during my first year as a Cybersecurity student out of curiosity to learn more about Arduino and hardware interaction.
 
-void loop() {
-  digitalWrite(trig, LOW);
-  delayMicroseconds(2);
+## Project Overview
 
-  digitalWrite(trig, HIGH);
-  delayMicroseconds(10);
+The project uses an ultrasonic sensor to measure the distance between the sensor and an object. The Arduino reads the sensor’s data and processes the results to perform the desired action.
 
-  digitalWrite(trig, LOW);
+## Components Used
 
-  duration = pulseIn(echo, HIGH);
+1. Arduino board
+2. Ultrasonic sensor
+3. Breadboard
+4. Jumper wires
 
+## Technologies
 
-  distance = duration * 0.034 / 2;
+1. Arduino
+2. C++
 
- 
-  Serial.print("Distance: ");
-  Serial.print(distance);
-  Serial.println(" cm");
+## What I Learned
 
-  delay(500);
-}
+* How ultrasonic sensors measure distance
+* How to connect a sensor to an Arduino
+* How to read sensor data
+* Basic interaction between hardware and software
+* Basic C++ programming for Arduino
+
+<img width="960" height="1280" alt="image" src="https://github.com/user-attachments/assets/a3521d36-b279-481d-95c0-bc93c05fb9f3" />
+
+This project was created for learning and experimentation. It helped me gain practical experience with sensors, microcontrollers, and the interaction between hardware and software.
